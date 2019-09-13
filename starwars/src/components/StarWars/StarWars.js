@@ -22,17 +22,21 @@ export default function StarWars(){
   },[]);
 
   return (
-    <div>
-      {
-        star.map(index => {
-          return <StarWarsCards
-           key = {index.name}
-           name = {index.name}
-           mass = {index.mass}
-
-           />
-        })
-      }
+    <div className = "container">
+      <div className = "allCards">
+        {
+          star.map(index => {
+            return <StarWarsCards
+             key = {index.name}
+             name = {index.name}
+             height = {index.height}
+             birth_year = {index.birth_year}
+             mass = {index.mass}
+  
+             />
+            })
+          }
+         </div>
     </div>
   );
 };

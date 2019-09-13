@@ -3,21 +3,40 @@ import styled from "styled-components";
 
 const StarWarsCards = (props) => {
 
+  // const AllCards = styled.div `
+  //   display:flex;
+  //   justify-content: space-between;
+  // `;
 
-  const Container = styled.div `
-    background:teal;
-    width:200px;
-    max-height:200px;
-    display:flex;
-    flex-direction: column;
+  const MainContainer = styled.div `
+    background:skyblue;
+    width:48%;
+    padding:20px;
+    margin-bottom:20px;
   `;
 
+  // const MainCard = styled.div `
+  //   display:flex;
+  //   justify-content:space-around;
+  //   margin:20px;
+  // `;
+
+  const Details = styled.h3 `
+      color:dimgray;
+  `;
+  
+
   return (
-    <Container key = {props.name}>
-      <h2>{props.name}</h2>
-      <h3>{props.mass}</h3>
+    
+      <MainContainer key = {props.name}>
       
-    </Container>
+            <h2>{props.name}</h2>
+            <Details>{props.height}</Details>
+            <Details>{props.birth_year}</Details>
+            <Details>{props.mass}</Details>
+            
+        </MainContainer>
+    
   )
 }
 export default StarWarsCards;
