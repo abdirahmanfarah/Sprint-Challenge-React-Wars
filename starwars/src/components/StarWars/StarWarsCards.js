@@ -13,6 +13,8 @@ const StarWarsCards = (props) => {
     width:48%;
     padding:20px;
     margin-bottom:20px;
+    border-radius:8%;
+    text-align:center;
   `;
 
   // const MainCard = styled.div `
@@ -20,6 +22,10 @@ const StarWarsCards = (props) => {
   //   justify-content:space-around;
   //   margin:20px;
   // `;
+
+  const Title = styled.h1 `
+    color:darkslategray;
+  `;
 
   const Details = styled.h3 `
       color:dimgray;
@@ -30,10 +36,10 @@ const StarWarsCards = (props) => {
     
       <MainContainer key = {props.name}>
       
-            <h2>{props.name}</h2>
-            <Details>{props.height}</Details>
-            <Details>{props.birth_year}</Details>
-            <Details>{props.mass}</Details>
+            <Title>{props.name}</Title>
+            <Details> Height: {props.height}</Details>
+            <Details>Birth-Year: {props.birth_year}</Details>
+            <Details>Mass: {props.mass}</Details>
             
         </MainContainer>
     
